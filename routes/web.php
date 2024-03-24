@@ -4,5 +4,9 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/', function () {
-    return Inertia::render('welcome');
+    return redirect('/stores');
+});
+
+Route::get('/stores', function () {
+    return Inertia::render('store/list-store');
 });
